@@ -22,6 +22,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_EB_SECRET_ACCESS_KEY }}
           application_name: docker-react
           environment_name: DockerReact-env
-          version_label: nobrand
+          version_label: docker-react-${{github.run_number}}
+          use_existing_version_if_available: true
           region: us-east-1
           deployment_package: deploy.zip
